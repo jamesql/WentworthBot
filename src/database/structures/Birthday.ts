@@ -3,7 +3,19 @@ class BirthdayDate {
     day: string;
     month: string;
     year: string;
-    constructor() {
+    constructor(d: Number | String, m: Number | String, y: Number | String) {
+
+    }
+
+    validateYear() {
+
+    }
+
+    checkBirthday() {
+
+    }
+
+    getYMD() {
         
     }
 }
