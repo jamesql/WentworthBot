@@ -12,8 +12,11 @@
       "lib": [
         "es2017",
         "esnext.asynciterable",
-        "DOM"
+        "DOM",        
       ],
+      "paths": {
+          "tslib" : ["./node_modules/tslib/tslib.d.ts"]
+      },
       "moduleResolution": "node"
     },
     "exclude": [
