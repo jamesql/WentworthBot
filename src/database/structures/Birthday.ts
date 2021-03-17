@@ -1,5 +1,5 @@
 
-class BirthdayDate {
+export class BirthdayDate {
     day: string;
     month: string;
     year: string;
@@ -16,7 +16,7 @@ class BirthdayDate {
     }
 
     getYMD() {
-        
+
     }
 }
 
