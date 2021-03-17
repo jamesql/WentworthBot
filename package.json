@@ -1,0 +1,26 @@
+{
+  "name": "wentworthbot",
+  "version": "1.0.0",
+  "description": "wentworth 2025 bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamesql/WentworthBot.git"
+  },
+  "keywords": [
+    "typescript"
+  ],
+  "author": "james ash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamesql/WentworthBot/issues"
+  },
+  "homepage": "https://github.com/jamesql/WentworthBot#readme",
+  "dependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
