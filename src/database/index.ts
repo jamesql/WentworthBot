@@ -16,7 +16,14 @@ export default class Database {
     static connect() {
         const cfg = config.database;
 
-        Database.db = mysql.createConnection
+        Database.db = mysql.createConnection({
+            host: cfg.ip,
+            user: cfg.username,
+            password: cfg.password,
+            database: cfg.database
+        });
     }
+
+    static disconnect() { Database.db.end(); }
 
 }
