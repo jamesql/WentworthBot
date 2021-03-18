@@ -1,7 +1,7 @@
 
 
-async function checkBday() {
-    
+async function validate_bd() {
+
 }
 
 export default null;
