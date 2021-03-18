@@ -27,7 +27,12 @@ export default class Database {
     static disconnect() { Database.db.end(); }
 
     execute(q: string, args: any) : Promise<Query> {
-        return null;
+        if (!Database.db) throw new TypeError("Conn null;");
+        return new Promise<Query>( (resolve,reject)=> {
+            Database.db.query(q, args, (err, res) => { if (err) return reject(err);
+                resolve(res);
+            });
+        });
     }
 
 }
