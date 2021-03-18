@@ -62,11 +62,20 @@ export default class Database {
     }
 
     async addRoleLink(messageId: string, reactionId: string, roleId: string) : Promise<RoleLink> {
-        return null;
+        const r = await this.execute("INSERT INTO ar_roles (message_id, role_id, emote_id) VALUES (?,?,?)", [messageId,reactionId,roleId]);
+        const d = r[0];
+
+        if (!d) return null;
+        return new RoleLink(d);
     }
 
-    async addBirthday(userId: string, day: Number, month: Number, year: Number) {
-        return null;
+    async addBirthday(userId: string, day: Number, month: Number, year: Number) : Promise<Birthday> {
+        const r = await this.execute("INSERT INTO bd (uid, day, month, year) VALUES (?,?,?,?)", [userId, day, month, year]);
+        const d = r[0];
+
+        if (!d) return null;
+
+        return new Birthday(d);
     }
 
 }
