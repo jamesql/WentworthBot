@@ -1,6 +1,9 @@
 
+interface BDayValidatePack {
 
-async function validate_bd() {
+}
+
+async function validate_bd(packet: BDayValidatePack) {
 
 }
 
