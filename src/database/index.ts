@@ -53,6 +53,15 @@ export default class Database {
     }
 
     async getRoleToGive(messageId: string, reactionId: string) : Promise<RoleLink> {
+        const r = await this.execute("SELECT * FROM ar_roles WHERE message_id=? AND emote_id=?", [messageId, reactionId]);
+        const d = r[0];
+        
+        if (!d) return null;
+
+        return new RoleLink(d);
+    }
+
+    async addRoleLink(messageId: string, reactionId: string, roleId: string) : Promise<RoleLink> {
         return null;
     }
 
