@@ -36,7 +36,11 @@ export default class Database {
     }
 
     async getAllBirthdays() : Promise<Birthday[]> {
-        return null;
+        const r = await this.execute("SELECT * FROM bd", []);
+        let i = 0, d: Birthday[] = [];
+        while(r[i]) d[i]=new Birthday(r[i++]);
+
+        return d;        
     }
 
     async getUserBirthday(userId: string) : Promise<Birthday> {
