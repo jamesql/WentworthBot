@@ -35,4 +35,16 @@ export default class Database {
         });
     }
 
+    async getAllBirthdays() : Promise<Birthday[]> {
+        return null;
+    }
+
+    async getUserBirthday(userId: string) : Promise<Birthday> {
+        return null;
+    }
+
+    async getRoleToGive(messageId: string, reactionId: string) : Promise<RoleLink> {
+        return null;
+    }
+
 }
