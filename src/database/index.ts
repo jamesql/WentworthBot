@@ -65,4 +65,8 @@ export default class Database {
         return null;
     }
 
+    async addBirthday(userId: string, day: Number, month: Number, year: Number) {
+        return null;
+    }
+
 }
