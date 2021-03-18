@@ -1,6 +1,7 @@
 import { Command, CommandMessage, Discord } from "@typeit/discord";
+import config from "../../config";
 
-@Discord("!")
+@Discord(config.bot.prefix)
 export abstract class Test {
     @Command("Test")
     async test(command: CommandMessage) {
