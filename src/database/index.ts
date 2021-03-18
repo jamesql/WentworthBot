@@ -44,7 +44,12 @@ export default class Database {
     }
 
     async getUserBirthday(userId: string) : Promise<Birthday> {
-        return null;
+        const r = await this.execute("SELECT * FROM bd WHERE uid=?", [userId]);
+        const d = r[0];
+
+        if (!d) return null;
+        
+        return new Birthday(d);
     }
 
     async getRoleToGive(messageId: string, reactionId: string) : Promise<RoleLink> {
