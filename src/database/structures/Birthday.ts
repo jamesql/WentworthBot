@@ -1,27 +1,18 @@
-
-export class BirthdayDate {
-    day: string;
-    month: string;
-    year: string;
-    constructor(d: Number | String, m: Number | String, y: Number | String) {
-
-    }
-
-    validateYear() {
-
-    }
-
-    checkBirthday() {
-
-    }
-
-    getYMD() {
-
-    }
-}
-
 export default class Birthday {
     id: string;
     uid: string;
-    bday: Date;
+    day: Number;
+    month: Number;
+    year: Number;
+    constructor(d: any) {
+        this.id = d.id;
+        this.uid = d.uid;
+        this.day = d.day;
+        this.month = d.month;
+        this.year = d.year;
+    }
+
+    checkIfBday() {
+        
+    }
 }
