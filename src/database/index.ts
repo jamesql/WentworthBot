@@ -26,4 +26,8 @@ export default class Database {
 
     static disconnect() { Database.db.end(); }
 
+    execute(q: string, args: any) : Promise<Query> {
+        return null;
+    }
+
 }
