@@ -11,7 +11,7 @@ const cfg = {
     },
 
     bot: {
-        token: "",
+        token: "--",
         prefix: "!",
     }
 
