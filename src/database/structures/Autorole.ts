@@ -6,3 +6,5 @@ export default class Autorole {
         this.text = d.text;
     }
 }
+
+export {Autorole};

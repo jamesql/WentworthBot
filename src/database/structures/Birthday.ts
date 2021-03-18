@@ -13,6 +13,8 @@ export default class Birthday {
     }
 
     checkIfBday() {
-        
+
     }
 }
+
+export {Birthday};

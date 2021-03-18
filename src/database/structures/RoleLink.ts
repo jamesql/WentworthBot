@@ -8,3 +8,5 @@ export default class RoleLink {
         this.emoteId = d.emote_id;
     }
 }
+
+export {RoleLink};
