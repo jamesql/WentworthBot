@@ -4,4 +4,4 @@ async function validate_bd() {
 
 }
 
-export default null;
+export { validate_bd }
